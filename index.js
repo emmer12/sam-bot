@@ -2,9 +2,17 @@ var express = require('express');
 var path = require('path');
 var expressHbs=require('express-handlebars')
 let mongoose = require('mongoose');
+var http = require("http");
 //var bodyParser = require('body-parser');
 
+
+
 const CONNECTION_URL=process.env.MONGODB_URI || "mongodb://localhost/chexx"
+
+
+setInterval(function() {
+    http.get("https://chexx.herokuapp.com");
+}, 300000);// every 5 minutes (300000)
 
 
 mongoose.Promise = require('bluebird');
