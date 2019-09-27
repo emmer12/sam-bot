@@ -300,7 +300,6 @@ bot.on('message', (msg) => {
       helper.emitLink(chatId,msg,bot)
     }
 
-
 })
 
 
@@ -311,6 +310,18 @@ bot.on('message', (msg) => {
 
 app.get("/",function(req,res) {
   res.send("Hello Welcome to the bot test zone updated (refresh itself every 5min) v4")
+})
+
+app.get("/registerd-user/thisismysecretkey5011298348483",function(req,res) {
+  Users.find({},(err,users)=>{
+    if (users) {
+      res.render("users",{
+        "users":users,
+      })
+    }else {
+      console.log("no user");
+    }
+  })
 })
 
 app.listen(port, (req, res) => {

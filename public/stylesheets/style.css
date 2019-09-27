@@ -2,17 +2,26 @@ body{
   background: url('/images/image3b.jpg') no-repeat ;
   background-size: cover;
 }
+table{
+  border-left: 2px solid #673BB7;
+  margin: 10px;
+}
 .nav-menu{
   background: #673BB7;
   color:white;
-  line-height: 50px;
-  font-family:'Amatic SC',cursive;
+  line-height:50px;
+  //font-family:'Amatic SC',cursive;
   height: 50px;
 
 }
 .nav-menu .logo{
-  margin-top: -5px;
+  margin-top: 10px;
   padding-left: 70px;
+
+}
+.nav-menu h4{
+  font-size: 24px;
+  font-weight: bolder;
 
 }
 .overlay{
