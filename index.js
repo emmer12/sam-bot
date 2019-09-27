@@ -2,9 +2,9 @@ var express = require('express');
 var path = require('path');
 var expressHbs=require('express-handlebars')
 let mongoose = require('mongoose');
-var bodyParser = require('body-parser');
+//var bodyParser = require('body-parser');
 
-const CONNECTION_URL=process.env.MONGODB_URL || "mongodb://localhost/chexx"
+const CONNECTION_URL=process.env.MONGODB_URI || "mongodb://localhost/chexx"
 
 
 mongoose.Promise = require('bluebird');
@@ -32,8 +32,8 @@ db.on('error',function(err) {
 });
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
 // view engine setup
 app.engine('.hbs',expressHbs({defaultLayout:'layout', extname:'.hbs'}));
 app.set('view engine', '.hbs');
@@ -73,7 +73,7 @@ var isAddress = function (address) {
 };
 
 /**
- * Checks if the given string is a checksummed address
+ * Checks if the given string is a checksummed addressas
  *
  * @method isChecksumAddress
  * @param {String} address the given HEX adress
