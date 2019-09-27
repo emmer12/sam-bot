@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  </head>
+
+  <body>
+    <div class="spinner-layer spinner-yellow">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+        <div class="circle"></div>
+    </div>
+</div>
+
+
+    {{> nav}}
+     {{{ body }}}
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/materialize.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slider();
+      $('select').material_select();
+       $('ul.tabs').tabs();
+
+    })
+    
+    </script>
+  </body>
+</html>

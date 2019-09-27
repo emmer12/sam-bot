@@ -1,0 +1,42 @@
+<style media="screen">
+#last_name{
+  border-bottom: 1px solid white;
+}
+.submit-button{
+  background: #673BB7;
+  border: 1px solid white
+}
+.submit-button:hover{
+  background: white;
+  color:#673BB7
+}
+.input-field{
+  height: 50px;
+  top: -20px;
+}
+.active{
+  color:white;
+}
+</style>
+<div class="nav-menu">
+  <div class="row">
+    <div class="col l6">
+      <img class="logo" src="/images/logo.png" alt="">
+    </div>
+    <div class="col l6">
+      <form class="form hide-on-med-and-down" action="index.html" method="post">
+        <div class="input-field col s6 m6 l3">
+            <input id="last_name" type="text" class="validate ">
+            <label for="last_name">Example@gmail.com</label>
+          </div>
+          <div class="input-field col s6 l3">
+          <input id="last_name" type="password" class="validate hide-on-med-and-down">
+          <label for="last_name">*******</label>
+        </div>
+        <button type="submit" class="submit-button btn btn-raised waves-effect">LOGIN</button>
+        <button type="button" class=" btn btn-raised waves-effect">SIGNUP</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
