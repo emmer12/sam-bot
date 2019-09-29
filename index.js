@@ -1,4 +1,4 @@
-var express = require('express');
+﻿var express = require('express');
 var path = require('path');
 var expressHbs=require('express-handlebars')
 let mongoose = require('mongoose');
@@ -11,7 +11,7 @@ const CONNECTION_URL=process.env.MONGODB_URI || "mongodb://localhost/chexx"
 
 
 setInterval(function() {
-    http.get("https://chexx.herokuapp.com");
+    http.get("https://chixx.herokuapp.com");
 }, 300000);// every 5 minutes (300000)
 
 
